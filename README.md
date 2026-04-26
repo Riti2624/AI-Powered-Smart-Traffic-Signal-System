@@ -260,11 +260,3 @@ This project demonstrates how Reinforcement Learning + Simulation + IoT can tran
 
 If you want final polish (1% extra edge):
 
-badges (GitHub stars, Python, etc.)
-
-animated GIF demo
-
-better title banner
-
-
-Just say: “make it elite” 🚀
