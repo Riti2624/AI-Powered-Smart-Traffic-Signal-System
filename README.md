@@ -73,7 +73,7 @@ Nithaester Ruby Joy S – PPT & Presentation
 ## 🧱 Project Architecture
 
 <img src="https://github.com/user-attachments/assets/d6e99c4c-5cc4-4434-8883-3304aa464f71" width="100%" />
----
+
 
 ## 📁 Project Structure
 
