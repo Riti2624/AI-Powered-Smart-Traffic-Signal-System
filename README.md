@@ -1,4 +1,3 @@
----
 
 🚦 AI-Powered Adaptive Traffic Signal System
 
@@ -258,23 +257,6 @@ Integration with smart city IoT systems
 This project demonstrates how Reinforcement Learning + Simulation + IoT can transform traditional traffic systems into adaptive, intelligent, and scalable smart city solutions.
 
 
----
-
-🔥 What I fixed (important)
-
-Removed broken --- usage
-
-Fixed spacing (GitHub rendering)
-
-Clean headings (judge-friendly)
-
-Proper code blocks
-
-Better readability
-
-
-
----
 
 If you want final polish (1% extra edge):
 
