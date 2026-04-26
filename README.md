@@ -102,3 +102,14 @@ When `--serve-api` is enabled:
 4. Show RL actions changing by intersection.
 5. (Optional) show hardware LED ACK on serial monitor.
 6. Compare `baseline_waiting_time` vs `total_waiting_time`.
+
+## 9. OUTPUT
+
+Dashboard view
+<img width="1080" height="543" alt="Screenshot_20260427_003738_Video Player(1)" src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" />
+
+Running Python Streamlit 
+<img width="1080" height="566" alt="Screenshot_20260427_003756_Video Player(1)" src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" />
+
+Training Rl Model using traci sumo datasets 
+<img width="1080" height="669" alt="Screenshot_20260427_003801_Video Player(1)" src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" />
