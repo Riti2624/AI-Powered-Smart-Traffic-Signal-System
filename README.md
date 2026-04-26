@@ -1,7 +1,6 @@
 
 # 🚦 AI-Powered Adaptive Traffic Signal System
-
-### Reinforcement Learning for Smart Chennai Traffic Control
+ Reinforcement Learning for Smart Chennai Traffic Control
 
 
 ---
@@ -254,9 +253,10 @@ Integration with smart city IoT systems
 ---
 
 ## 🎥 Demo
+```bash
 
 👉 https://youtu.be/8BeHzeE_GX0?si=XGi4sDi8jrXFU7i0
-
+```
 
 ---
 
