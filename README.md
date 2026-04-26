@@ -1,115 +1,255 @@
-# Reinforcement Learning Adaptive Traffic Control (5-Intersection Corridor)
+🚦 AI-Powered Adaptive Traffic Signal System
 
-Fully integrated hackathon system with one master loop:
+Reinforcement Learning for Smart Chennai Traffic Control
 
-SUMO TraCI -> State Generator -> RL Agent -> Signal Controller -> Hardware + Dashboard
 
-## Hackathon Winning Project
+---
 
-This project is the hackathon-winning implementation for an AI-powered smart traffic signal system.
+🧠 Overview
 
-Team Lead:
-- Ritika S
+This project presents a real-time adaptive traffic signal control system designed for urban environments like Chennai, where traffic is highly dynamic and dominated by mixed vehicle types.
 
-PPT and presentation contribution:
-- Nithaester Ruby Joy S
+Unlike traditional fixed-timing systems, our solution uses Reinforcement Learning (PPO) to dynamically adjust signal timings based on live traffic conditions.
 
-## Project Structure
 
-- `simulation/`: SUMO configuration and TraCI simulation adapter
-- `rl/`: PPO training environment and inference agent
-- `hardware/`: Arduino/ESP32 serial bridge + sample sketch
-- `backend/`: integrated controller, telemetry, and REST API
-- `dashboard/`: Streamlit real-time visualization
-- `models/`: trained RL weights (`ppo_traffic.zip`)
-- `main.py`: master controller (single integrated entry point)
+---
 
-## 1. Setup
+🔁 System Pipeline
 
-1. Install Python 3.10+.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Optional (SUMO mode): install SUMO and set `SUMO_HOME` environment variable.
-4. Optional (hardware mode): connect Arduino/ESP32 and note COM port.
+SUMO (TraCI) → State Generator → RL Agent → Signal Controller → Dashboard + Hardware
 
-## 2. SUMO Network Build (one time)
+Traffic is simulated using Simulation of Urban MObility (SUMO)
 
-From `simulation/sumo/`:
+Real-time lane data is extracted via TraCI
 
-```bash
-generate_network.bat
-```
+RL agent optimizes signal timings
 
-This creates `corridor.net.xml` from `corridor.nod.xml` and `corridor.edg.xml`.
+Output is visualized and optionally sent to hardware
 
-## 3. Train RL Model (PPO)
 
-```bash
+
+---
+
+🏆 Hackathon Context
+
+Built for TNSDC Naan Mudhalvan 2026 – Advanced AI/ML Hackathon (PS20)
+
+Problem: Chennai Traffic Signal Timing
+Goal: Reduce congestion and improve traffic flow using AI
+
+
+---
+
+👥 Team
+
+Ritika S – Full Stack Developer, RL Integration
+
+Nithaester Ruby Joy S – PPT & Presentation
+
+
+
+---
+
+⚙️ Key Features
+
+🚦 Adaptive traffic signal control using RL
+
+📊 Real-time dashboard visualization (Streamlit)
+
+🔌 Arduino-based hardware signal simulation
+
+🚑 Emergency vehicle priority handling
+
+🔁 Fully integrated end-to-end pipeline
+
+🧪 SUMO-based realistic traffic simulation
+
+
+
+---
+
+🧱 Project Architecture
+
+<img src="https://github.com/user-attachments/assets/d6e99c4c-5cc4-4434-8883-3304aa464f71" width="100%" />
+---
+
+📁 Project Structure
+
+simulation/   → SUMO config + TraCI adapter  
+rl/           → PPO training + inference agent  
+hardware/     → Arduino serial bridge + sketch  
+backend/      → Controller, telemetry, API  
+dashboard/    → Streamlit visualization  
+models/       → Trained RL weights  
+main.py       → Master orchestrator
+
+
+---
+
+🚀 Getting Started
+
+1. Install Requirements
+
+pip install -r requirements.txt
+
+2. Setup SUMO (Optional but Recommended)
+
+Install SUMO
+
+Set SUMO_HOME environment variable
+
+
+
+---
+
+🧠 Train RL Model
+
 python -m rl.train --timesteps 50000 --intersections 5 --output models/ppo_traffic.zip
-```
 
-If model is missing, the system uses a deterministic adaptive heuristic fallback.
+> If model is missing, system falls back to a rule-based heuristic controller.
 
-## 4. Run Integrated Controller
 
-Basic run (headless SUMO only):
 
-```bash
+
+---
+
+▶️ Run System
+
+Basic Run
+
 python main.py --interval 2 --serve-api
-```
 
-With hardware serial output:
+With Hardware
 
-```bash
 python main.py --serial-port COM5 --interval 2 --serve-api
-```
 
-## 5. Launch Dashboard
 
-In another terminal:
+---
 
-```bash
+📊 Launch Dashboard
+
 streamlit run dashboard/app.py
-```
 
-Dashboard shows:
-- live waiting/queue/throughput
-- RL action decisions per intersection
-- per-intersection TraCI lane state and signal status
-- before vs after RL comparison
+Dashboard Displays:
 
-## 6. Integration Notes
+Traffic queue & waiting time
 
-- `main.py` is the single orchestrator and keeps module communication unified.
-- Loop timing is controlled by `--interval`.
-- Fallbacks:
-  - No SUMO/traci -> realistic mock corridor simulator
-  - No serial hardware -> no-op hardware bridge
+RL decisions per intersection
 
-## 7. API Endpoints
+Signal states (G/Y/R)
 
-When `--serve-api` is enabled:
-- `GET /api/health`
-- `GET /api/latest`
+Throughput metrics
 
-## 8. Demo Checklist
+Baseline vs RL comparison
 
-1. Start `main.py`.
-2. Start Streamlit dashboard.
-3. Show evolving queue and waiting metrics.
-4. Show RL actions changing by intersection.
-5. (Optional) show hardware LED ACK on serial monitor.
-6. Compare `baseline_waiting_time` vs `total_waiting_time`.
 
-## 9. OUTPUT
 
-Dashboard view
-<img width="1080" height="543" alt="Screenshot_20260427_003738_Video Player(1)" src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" />
+---
 
-Running Python Streamlit 
-<img width="1080" height="566" alt="Screenshot_20260427_003756_Video Player(1)" src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" />
+🔌 Hardware Integration
 
-Training Rl Model using traci sumo datasets 
-<img width="1080" height="669" alt="Screenshot_20260427_003801_Video Player(1)" src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" />
+Arduino / ESP32
+
+LEDs (Red, Yellow, Green)
+
+Serial communication from backend
+
+
+Used to simulate real-world signal behavior.
+
+
+---
+
+🌐 API Endpoints
+
+GET /api/health
+
+GET /api/latest
+
+
+
+---
+
+🧪 Simulation Behavior
+
+Uses TraCI to extract:
+
+vehicle count
+
+waiting time
+
+lane density
+
+
+RL agent outputs:
+
+signal duration adjustments
+
+phase switching decisions
+
+
+
+
+---
+
+🧯 Fail-Safe Mechanism
+
+No SUMO → fallback mock simulation
+
+No RL model → heuristic controller
+
+No hardware → safe no-op
+
+
+Ensures system always runs during demo
+
+
+---
+
+📸 Output Screens
+
+📊 Dashboard
+
+<img src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" width="100%" />🖥️ Streamlit Running
+
+<img src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" width="100%" />🧠 RL Training
+
+<img src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" width="100%" />
+---
+
+📈 Results
+
+⬇️ Reduced average waiting time
+
+⬆️ Improved traffic throughput
+
+🔄 Dynamic adaptation to traffic conditions
+
+
+
+---
+
+🚀 Future Scope
+
+Live CCTV integration with YOLO
+
+Deployment on real intersections
+
+Multi-agent RL for city-scale traffic
+
+Integration with smart city IoT systems
+
+
+
+---
+
+🎥 Demo
+
+👉 https://youtu.be/8BeHzeE_GX0?si=XGi4sDi8jrXFU7i0
+
+
+---
+
+📌 Conclusion
+
+This project demonstrates how Reinforcement Learning + Simulation + IoT can transform traditional traffic systems into adaptive, intelligent, and scalable smart city solutions.
