@@ -135,19 +135,19 @@ python main.py --serial-port COM5 --interval 2 --serve-api
 
 ## 📊 Launch Dashboard
 
-streamlit run dashboard/app.py
+1. streamlit run dashboard/app.py
 
-Dashboard Displays
+2. Dashboard Displays
 
-Traffic queue & waiting time
+3. Traffic queue & waiting time
 
-RL decisions per intersection
+4. RL decisions per intersection
 
-Signal states (Green / Yellow / Red)
+5. Signal states (Green / Yellow / Red)
 
-Throughput metrics
+6. Throughput metrics
 
-Baseline vs RL comparison
+7. Baseline vs RL comparison
 
 
 
@@ -155,11 +155,11 @@ Baseline vs RL comparison
 
 ## 🔌 Hardware Integration
 
-Arduino / ESP32
+- Arduino / ESP32
 
-LEDs (Red, Yellow, Green)
+- LEDs (Red, Yellow, Green)
 
-Serial communication from backend
+- Serial communication from backend
 
 
 Used to simulate real-world signal behavior.
@@ -169,30 +169,33 @@ Used to simulate real-world signal behavior.
 
 ## 🌐 API Endpoints
 
-GET /api/health
-
-GET /api/latest
-
-
+1. GET /api/health
+ ```bash
+Invoke-RestMethod http://127.0.0.1:8000/api/health 
+```
+3. GET /api/latest
+```bash
+Invoke-RestMethod http://127.0.0.1:8000/api/latest
+```
 
 ---
 
 ## 🧪 Simulation Behavior
 
-TraCI extracts:
+1. TraCI extracts:
 
-vehicle count
+- vehicle count
 
-waiting time
+- waiting time
 
-lane density
+- lane density
 
 
-RL agent outputs:
+2. RL agent outputs:
 
-signal duration adjustments
+- signal duration adjustments
 
-phase switching decisions
+- phase switching decisions
 
 
 
@@ -200,11 +203,11 @@ phase switching decisions
 
 ## 🧯 Fail-Safe Mechanism
 
-No SUMO → fallback mock simulation
+1. No SUMO → fallback mock simulation
 
-No RL model → heuristic controller
+2. No RL model → heuristic controller
 
-No hardware → safe no-op
+3. No hardware → safe no-op
 
 
 ✔ Ensures system always runs during demo
@@ -214,14 +217,13 @@ No hardware → safe no-op
 
 ## 📸 Output Screens
 
-### 📊 Dashboard
-
+**📊 Dashboard**
 <img src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" width="100%" />
 
-### 🖥️ Streamlit Running
+**🖥️ Streamlit Running**
 <img src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" width="100%" />
 
-### 🧠 RL Training
+**🧠 RL Training**
 <img src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" width="100%" />
 ---
 
