@@ -94,7 +94,7 @@ main.py       → Master orchestrator
 1. Install Requirements
 ```bash
 pip install -r requirements.txt
-```is
+```
 
 
 2. Setup SUMO (Optional but Recommended)
