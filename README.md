@@ -1,7 +1,7 @@
 
-## 🚦 AI-Powered Adaptive Traffic Signal System
+# 🚦 AI-Powered Adaptive Traffic Signal System
 
-Reinforcement Learning for Smart Chennai Traffic Control
+### Reinforcement Learning for Smart Chennai Traffic Control
 
 
 ---
@@ -92,25 +92,28 @@ main.py       → Master orchestrator
 ## 🚀 Getting Started
 
 1. Install Requirements
-
+```bash
 pip install -r requirements.txt
+```is
+
 
 2. Setup SUMO (Optional but Recommended)
 
-Install SUMO
-
+### Install SUMO
+```bash
 Set SUMO_HOME environment variable
-
+```
 
 
 ---
 
-## 🧠 Train RL Model
-
+### 🧠 Train RL Model
+```bash
 python -m rl.train --timesteps 50000 --intersections 5 --output models/ppo_traffic.zip
+```
+
 
 > If the model is missing, the system falls back to a rule-based heuristic controller.
-
 
 
 
@@ -119,13 +122,14 @@ python -m rl.train --timesteps 50000 --intersections 5 --output models/ppo_traff
 ## ▶️ Run System
 
 Basic Run
-
+```bash
 python main.py --interval 2 --serve-api
+```
 
 With Hardware
-
+```bash
 python main.py --serial-port COM5 --interval 2 --serve-api
-
+```
 
 ---
 
@@ -210,12 +214,14 @@ No hardware → safe no-op
 
 ## 📸 Output Screens
 
-📊 Dashboard
+### 📊 Dashboard
 
-<img src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" width="100%" />🖥️ Streamlit Running
+<img src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" width="100%" />
 
-<img src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" width="100%" />🧠 RL Training
+### 🖥️ Streamlit Running
+<img src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" width="100%" />
 
+### 🧠 RL Training
 <img src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" width="100%" />
 ---
 
