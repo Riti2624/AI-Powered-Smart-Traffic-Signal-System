@@ -1,0 +1,45 @@
+<routes>
+    <vType id="bike" accel="2.5" decel="4.5" length="2.0" maxSpeed="12" sigma="0.5"/>
+    <vType id="car" accel="2.0" decel="4.5" length="4.5" maxSpeed="15" sigma="0.5"/>
+    <vType id="bus" accel="1.2" decel="4.0" length="10" maxSpeed="12" sigma="0.5"/>
+    <vType id="truck" accel="1.0" decel="3.5" length="8" maxSpeed="11" sigma="0.6"/>
+    <vType id="ambulance" vClass="emergency" accel="2.8" decel="4.8" length="6.0" maxSpeed="20" sigma="0.2" color="1,0,0"/>
+
+    <route id="west_east" edges="W_J1 J1_J2 J2_J3 J3_J4 J4_J5 J5_E"/>
+    <route id="east_west" edges="E_J5 J5_J4 J4_J3 J3_J2 J2_J1 J1_W"/>
+
+    <route id="north1_south1" edges="N1_J1 J1_S1"/>
+    <route id="south1_north1" edges="S1_J1 J1_N1"/>
+    <route id="north2_south2" edges="N2_J2 J2_S2"/>
+    <route id="south2_north2" edges="S2_J2 J2_N2"/>
+    <route id="north3_south3" edges="N3_J3 J3_S3"/>
+    <route id="south3_north3" edges="S3_J3 J3_N3"/>
+    <route id="north4_south4" edges="N4_J4 J4_S4"/>
+    <route id="south4_north4" edges="S4_J4 J4_N4"/>
+    <route id="north5_south5" edges="N5_J5 J5_S5"/>
+    <route id="south5_north5" edges="S5_J5 J5_N5"/>
+
+    <!-- Chennai style flow: 60-70% bikes -->
+    <flow id="bikes_we" begin="0" end="3600" route="west_east" type="bike" vehsPerHour="1300"/>
+    <flow id="bikes_ew" begin="0" end="3600" route="east_west" type="bike" vehsPerHour="1200"/>
+    <flow id="cars_we" begin="0" end="3600" route="west_east" type="car" vehsPerHour="600"/>
+    <flow id="cars_ew" begin="0" end="3600" route="east_west" type="car" vehsPerHour="550"/>
+    <flow id="buses_we" begin="0" end="3600" route="west_east" type="bus" vehsPerHour="110"/>
+    <flow id="buses_ew" begin="0" end="3600" route="east_west" type="bus" vehsPerHour="100"/>
+    <flow id="trucks_we" begin="0" end="3600" route="west_east" type="truck" vehsPerHour="90"/>
+    <flow id="trucks_ew" begin="0" end="3600" route="east_west" type="truck" vehsPerHour="85"/>
+
+    <flow id="cross_n1" begin="0" end="3600" route="north1_south1" type="bike" vehsPerHour="180"/>
+    <flow id="cross_s1" begin="0" end="3600" route="south1_north1" type="bike" vehsPerHour="170"/>
+    <flow id="cross_n2" begin="0" end="3600" route="north2_south2" type="bike" vehsPerHour="180"/>
+    <flow id="cross_s2" begin="0" end="3600" route="south2_north2" type="bike" vehsPerHour="170"/>
+    <flow id="cross_n3" begin="0" end="3600" route="north3_south3" type="bike" vehsPerHour="180"/>
+    <flow id="cross_s3" begin="0" end="3600" route="south3_north3" type="bike" vehsPerHour="170"/>
+    <flow id="cross_n4" begin="0" end="3600" route="north4_south4" type="bike" vehsPerHour="180"/>
+    <flow id="cross_s4" begin="0" end="3600" route="south4_north4" type="bike" vehsPerHour="170"/>
+    <flow id="cross_n5" begin="0" end="3600" route="north5_south5" type="bike" vehsPerHour="180"/>
+    <flow id="cross_s5" begin="0" end="3600" route="south5_north5" type="bike" vehsPerHour="170"/>
+
+    <!-- Emergency demo vehicle: guaranteed ambulance run through the main corridor -->
+    <flow id="ambulance_demo" begin="20" end="21" route="west_east" type="ambulance" number="1" departLane="best" departSpeed="max"/>
+</routes>

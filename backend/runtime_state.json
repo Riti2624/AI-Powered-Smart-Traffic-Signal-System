@@ -1,0 +1,269 @@
+{
+  "timestamp": 1776334429.7669542,
+  "step": 665,
+  "mode": "sumo",
+  "total_waiting_time": 9627.0,
+  "baseline_waiting_time": 9694.6,
+  "total_queue": 263.0,
+  "total_throughput": 6.63,
+  "actions": [
+    {
+      "intersection_id": "J1",
+      "green_delta_sec": 0,
+      "switch_phase": false
+    },
+    {
+      "intersection_id": "J2",
+      "green_delta_sec": -4,
+      "switch_phase": false
+    },
+    {
+      "intersection_id": "J3",
+      "green_delta_sec": 4,
+      "switch_phase": false
+    },
+    {
+      "intersection_id": "J4",
+      "green_delta_sec": 0,
+      "switch_phase": true
+    },
+    {
+      "intersection_id": "J5",
+      "green_delta_sec": 4,
+      "switch_phase": true
+    }
+  ],
+  "signal_states": {
+    "J1": "G",
+    "J2": "G",
+    "J3": "R",
+    "J4": "Y",
+    "J5": "Y"
+  },
+  "state": {
+    "timestamp": 1776334429.7669542,
+    "step": 665,
+    "intersections": [
+      {
+        "intersection_id": "J1",
+        "lanes": [
+          {
+            "lane_id": "J2_J1_0",
+            "queue_length": 0.0,
+            "density": 0.05,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "J2_J1_1",
+            "queue_length": 0.0,
+            "density": 0.2,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "N1_J1_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 576.0
+          },
+          {
+            "lane_id": "S1_J1_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 509.0
+          },
+          {
+            "lane_id": "W_J1_0",
+            "queue_length": 11.0,
+            "density": 0.7,
+            "waiting_time": 2163.0
+          },
+          {
+            "lane_id": "W_J1_1",
+            "queue_length": 10.0,
+            "density": 0.75,
+            "waiting_time": 1673.0
+          }
+        ],
+        "throughput": 1.5537340965361675,
+        "emergency_vehicle_count": 0,
+        "emergency_lane_ids": []
+      },
+      {
+        "intersection_id": "J2",
+        "lanes": [
+          {
+            "lane_id": "J1_J2_0",
+            "queue_length": 0.0,
+            "density": 0.45,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "J1_J2_1",
+            "queue_length": 5.0,
+            "density": 0.6,
+            "waiting_time": 15.0
+          },
+          {
+            "lane_id": "J3_J2_0",
+            "queue_length": 0.0,
+            "density": 0.05,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "J3_J2_1",
+            "queue_length": 0.0,
+            "density": 0.05,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "N2_J2_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 542.0
+          },
+          {
+            "lane_id": "S2_J2_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 620.0
+          }
+        ],
+        "throughput": 1.970016640504825,
+        "emergency_vehicle_count": 0,
+        "emergency_lane_ids": []
+      },
+      {
+        "intersection_id": "J3",
+        "lanes": [
+          {
+            "lane_id": "J2_J3_0",
+            "queue_length": 2.0,
+            "density": 0.55,
+            "waiting_time": 3.0
+          },
+          {
+            "lane_id": "J2_J3_1",
+            "queue_length": 1.0,
+            "density": 0.6,
+            "waiting_time": 1.0
+          },
+          {
+            "lane_id": "J4_J3_0",
+            "queue_length": 1.0,
+            "density": 0.45,
+            "waiting_time": 2.0
+          },
+          {
+            "lane_id": "J4_J3_1",
+            "queue_length": 2.0,
+            "density": 0.55,
+            "waiting_time": 3.0
+          },
+          {
+            "lane_id": "N3_J3_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 518.0
+          },
+          {
+            "lane_id": "S3_J3_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 538.0
+          }
+        ],
+        "throughput": 0.4569159811394512,
+        "emergency_vehicle_count": 0,
+        "emergency_lane_ids": []
+      },
+      {
+        "intersection_id": "J4",
+        "lanes": [
+          {
+            "lane_id": "J3_J4_0",
+            "queue_length": 0.0,
+            "density": 0.1,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "J3_J4_1",
+            "queue_length": 0.0,
+            "density": 0.1,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "J5_J4_0",
+            "queue_length": 5.0,
+            "density": 0.5,
+            "waiting_time": 66.0
+          },
+          {
+            "lane_id": "J5_J4_1",
+            "queue_length": 10.0,
+            "density": 0.7,
+            "waiting_time": 82.0
+          },
+          {
+            "lane_id": "N4_J4_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 585.0
+          },
+          {
+            "lane_id": "S4_J4_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 531.0
+          }
+        ],
+        "throughput": 1.2836239348367076,
+        "emergency_vehicle_count": 0,
+        "emergency_lane_ids": []
+      },
+      {
+        "intersection_id": "J5",
+        "lanes": [
+          {
+            "lane_id": "E_J5_0",
+            "queue_length": 8.0,
+            "density": 0.75,
+            "waiting_time": 61.0
+          },
+          {
+            "lane_id": "E_J5_1",
+            "queue_length": 8.0,
+            "density": 0.7,
+            "waiting_time": 29.0
+          },
+          {
+            "lane_id": "J4_J5_0",
+            "queue_length": 0.0,
+            "density": 0.05,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "J4_J5_1",
+            "queue_length": 0.0,
+            "density": 0.1,
+            "waiting_time": 0.0
+          },
+          {
+            "lane_id": "N5_J5_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 546.0
+          },
+          {
+            "lane_id": "S5_J5_0",
+            "queue_length": 20.0,
+            "density": 1.0,
+            "waiting_time": 564.0
+          }
+        ],
+        "throughput": 1.366014211754909,
+        "emergency_vehicle_count": 0,
+        "emergency_lane_ids": []
+      }
+    ]
+  }
+}

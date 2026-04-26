@@ -1,0 +1,28 @@
+Reinforcement Learning Adaptive Traffic Control - Integrated Architecture
+
++-------------------+      +--------------------+      +---------------------+
+| SUMO/TraCI Layer  |----->| State Generator    |----->| PPO RL Agent        |
+| 5 intersections   |      | queue/density/wait |      | action per junction |
++-------------------+      +--------------------+      +----------+----------+
+         ^                                                           |
+         |                                                           v
+         |      +--------------------+      +---------------------+  
+         +------| Signal Controller  |<-----| Vision (YOLOv8)     |  
+                | applies phase+time |      | class/count per lane|  
+                +---------+----------+      +---------------------+  
+                          |
+             +------------+-------------+
+             |                          |
+             v                          v
++-------------------------+   +------------------------------+
+| Hardware Bridge         |   | Dashboard + API/Telemetry    |
+| Arduino/ESP32 LEDs      |   | live KPIs, decisions, trends |
++-------------------------+   +------------------------------+
+
+Execution loop every N seconds (main.py):
+1) simulation.step()
+2) collect state + optional YOLO detection
+3) build RL observation vector
+4) RL predicts actions
+5) apply to SUMO TLS + hardware LEDs
+6) publish telemetry for dashboard
