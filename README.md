@@ -1,12 +1,12 @@
 
-🚦 AI-Powered Adaptive Traffic Signal System
+## 🚦 AI-Powered Adaptive Traffic Signal System
 
 Reinforcement Learning for Smart Chennai Traffic Control
 
 
 ---
 
-🧠 Overview
+## 🧠 Overview
 
 This project presents a real-time adaptive traffic signal control system designed for urban environments like Chennai, where traffic is highly dynamic and dominated by mixed vehicle types.
 
@@ -15,7 +15,7 @@ Unlike traditional fixed-timing systems, our solution uses Reinforcement Learnin
 
 ---
 
-🔁 System Pipeline
+## 🔁 System Pipeline
 
 SUMO (TraCI) → State Generator → RL Agent → Signal Controller → Dashboard + Hardware
 
@@ -31,7 +31,7 @@ Output is visualized and optionally sent to hardware
 
 ---
 
-🏆 Hackathon Context
+## 🏆 Hackathon Context
 
 Built for TNSDC Naan Mudhalvan 2026 – Advanced AI/ML Hackathon (PS20)
 
@@ -43,7 +43,7 @@ Goal: Reduce congestion and improve traffic flow using AI
 
 ---
 
-👥 Team
+## 👥 Team
 
 Ritika S – Full Stack Developer, RL Integration
 
@@ -53,7 +53,7 @@ Nithaester Ruby Joy S – PPT & Presentation
 
 ---
 
-⚙️ Key Features
+## ⚙️ Key Features
 
 🚦 Adaptive traffic signal control using RL
 
@@ -71,12 +71,12 @@ Nithaester Ruby Joy S – PPT & Presentation
 
 ---
 
-🧱 Project Architecture
+## 🧱 Project Architecture
 
 <img src="https://github.com/user-attachments/assets/d6e99c4c-5cc4-4434-8883-3304aa464f71" width="100%" />
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
 simulation/   → SUMO config + TraCI adapter  
 rl/           → PPO training + inference agent  
@@ -89,7 +89,7 @@ main.py       → Master orchestrator
 
 ---
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 1. Install Requirements
 
@@ -105,7 +105,7 @@ Set SUMO_HOME environment variable
 
 ---
 
-🧠 Train RL Model
+## 🧠 Train RL Model
 
 python -m rl.train --timesteps 50000 --intersections 5 --output models/ppo_traffic.zip
 
@@ -116,7 +116,7 @@ python -m rl.train --timesteps 50000 --intersections 5 --output models/ppo_traff
 
 ---
 
-▶️ Run System
+## ▶️ Run System
 
 Basic Run
 
@@ -129,7 +129,7 @@ python main.py --serial-port COM5 --interval 2 --serve-api
 
 ---
 
-📊 Launch Dashboard
+## 📊 Launch Dashboard
 
 streamlit run dashboard/app.py
 
@@ -149,7 +149,7 @@ Baseline vs RL comparison
 
 ---
 
-🔌 Hardware Integration
+## 🔌 Hardware Integration
 
 Arduino / ESP32
 
@@ -163,7 +163,7 @@ Used to simulate real-world signal behavior.
 
 ---
 
-🌐 API Endpoints
+## 🌐 API Endpoints
 
 GET /api/health
 
@@ -173,7 +173,7 @@ GET /api/latest
 
 ---
 
-🧪 Simulation Behavior
+## 🧪 Simulation Behavior
 
 TraCI extracts:
 
@@ -194,7 +194,7 @@ phase switching decisions
 
 ---
 
-🧯 Fail-Safe Mechanism
+## 🧯 Fail-Safe Mechanism
 
 No SUMO → fallback mock simulation
 
@@ -208,7 +208,7 @@ No hardware → safe no-op
 
 ---
 
-📸 Output Screens
+## 📸 Output Screens
 
 📊 Dashboard
 
@@ -219,7 +219,7 @@ No hardware → safe no-op
 <img src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" width="100%" />
 ---
 
-📈 Results
+## 📈 Results
 
 ⬇️ Reduced average waiting time
 
@@ -231,7 +231,7 @@ No hardware → safe no-op
 
 ---
 
-🚀 Future Scope
+## 🚀 Future Scope
 
 Live CCTV integration with YOLO
 
@@ -245,13 +245,13 @@ Integration with smart city IoT systems
 
 ---
 
-🎥 Demo
+## 🎥 Demo
 
 👉 https://youtu.be/8BeHzeE_GX0?si=XGi4sDi8jrXFU7i0
 
 
 ---
 
-📌 Conclusion
+## 📌 Conclusion
 
 This project demonstrates how Reinforcement Learning + Simulation + IoT can transform traditional traffic systems into adaptive, intelligent, and scalable smart city solutions.
