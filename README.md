@@ -255,8 +255,3 @@ Integration with smart city IoT systems
 📌 Conclusion
 
 This project demonstrates how Reinforcement Learning + Simulation + IoT can transform traditional traffic systems into adaptive, intelligent, and scalable smart city solutions.
-
-
-
-If you want final polish (1% extra edge):
-
