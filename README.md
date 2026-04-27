@@ -224,9 +224,12 @@ Invoke-RestMethod http://127.0.0.1:8000/api/latest
 <img width="1909" height="882" alt="Screenshot 2026-04-27 174032" src="https://github.com/user-attachments/assets/9b1b626f-f616-4e12-be8a-40afb2efd7ee" />
 <img width="1872" height="739" alt="Screenshot 2026-04-27 174047" src="https://github.com/user-attachments/assets/648730f3-6edf-4c37-b9a2-5a0c655e105b" />
 
+---
+
 **🖥️ Streamlit Running**
 <img width="1919" height="975" alt="Screenshot 2026-04-27 173830" src="https://github.com/user-attachments/assets/952a1de7-8f21-4dcf-a1b7-f1ca8387b164" />
 
+---
 
 **🧠 RL Training**
 <img width="1919" height="979" alt="Screenshot 2026-04-27 173819" src="https://github.com/user-attachments/assets/6055f516-df44-4c2d-ac91-b782767dd0f2" />
