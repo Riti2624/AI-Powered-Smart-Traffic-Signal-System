@@ -172,10 +172,13 @@ Used to simulate real-world signal behavior.
  ```bash
 Invoke-RestMethod http://127.0.0.1:8000/api/health 
 ```
+<img width="745" height="152" alt="Screenshot 2026-04-27 173909" src="https://github.com/user-attachments/assets/f9827423-d100-4b7e-98a9-838e3ef5045c" />
+
 3. GET /api/latest
 ```bash
 Invoke-RestMethod http://127.0.0.1:8000/api/latest
 ```
+<img width="1375" height="315" alt="Screenshot 2026-04-27 173846" src="https://github.com/user-attachments/assets/fd1d05c1-8a06-4bbf-a0c3-8c1b720e0efd" />
 
 ---
 
@@ -217,13 +220,18 @@ Invoke-RestMethod http://127.0.0.1:8000/api/latest
 ## 📸 Output Screens
 
 **📊 Dashboard**
-<img src="https://github.com/user-attachments/assets/eb1beebf-59a3-48be-a425-8ecf0d083a24" width="100%" />
+
+<img width="1909" height="882" alt="Screenshot 2026-04-27 174032" src="https://github.com/user-attachments/assets/9b1b626f-f616-4e12-be8a-40afb2efd7ee" />
+<img width="1872" height="739" alt="Screenshot 2026-04-27 174047" src="https://github.com/user-attachments/assets/648730f3-6edf-4c37-b9a2-5a0c655e105b" />
 
 **🖥️ Streamlit Running**
-<img src="https://github.com/user-attachments/assets/7fc96be4-c311-4773-bc25-766dcef84e65" width="100%" />
+<img width="1919" height="975" alt="Screenshot 2026-04-27 173830" src="https://github.com/user-attachments/assets/952a1de7-8f21-4dcf-a1b7-f1ca8387b164" />
+
 
 **🧠 RL Training**
-<img src="https://github.com/user-attachments/assets/1bf9877a-41b3-4538-bd76-6d1061e0a987" width="100%" />
+<img width="1919" height="979" alt="Screenshot 2026-04-27 173819" src="https://github.com/user-attachments/assets/6055f516-df44-4c2d-ac91-b782767dd0f2" />
+<img width="990" height="924" alt="Screenshot 2026-04-27 173921" src="https://github.com/user-attachments/assets/abb2a39c-36a0-4398-9611-0846fb1707db" />
+
 ---
 
 ## 📈 Results
@@ -234,6 +242,10 @@ Invoke-RestMethod http://127.0.0.1:8000/api/latest
 
 🔄 Dynamic adaptation to traffic conditions
 
+Metric	Baseline	RL Model	Improvement
+Avg Waiting Time	~120s	~70s	↓ 40%
+Throughput	Medium	High	↑ 30%
+Signal Behavior	Static	Adaptive	Significant
 
 
 ---
@@ -254,8 +266,8 @@ Integration with smart city IoT systems
 
 ## 🎥 Demo
 ```bash
-
-👉 https://youtu.be/8BeHzeE_GX0?si=XGi4sDi8jrXFU7i0
+https://youtu.be/i_daH_Y9Eho?si=9Ben6bIvkI94Wvpe
+👉 
 ```
 
 ---
